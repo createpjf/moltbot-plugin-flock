@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub](https://img.shields.io/badge/GitHub-FLock--io%2Fmoltbot--plugin--flock-blue?logo=github)](https://github.com/FLock-io/moltbot-plugin-flock)
 
-> Use [FLock.io](https://flock.io) as your AI model gateway in Moltbot/Clawdbot
+> Use [FLock API Platform](https://platform.flock.io) as your AI model gateway in Moltbot/Clawdbot
 
 ---
 
@@ -46,10 +46,10 @@ moltbot --version
 
 ### 2. FLock API Key
 
-You need an API key from FLock:
+You need an API key from FLock API Platform:
 
-1. Go to [FLock.io](https://flock.io) and create an account
-2. Navigate to your dashboard
+1. Go to [FLock API Platform](https://platform.flock.io) and create an account
+2. Navigate to your API Keys section
 3. Generate an API key
 4. Keep this key safe - you'll need it during setup!
 
@@ -269,7 +269,7 @@ moltbot plugins disable flock
 
 ## Links
 
-- **FLock Platform**: https://flock.io
+- **FLock API Platform**: https://platform.flock.io
 - **FLock API Documentation**: https://docs.flock.io/flock-products/api-platform/api-endpoint
 - **Moltbot Documentation**: https://docs.molt.bot
 - **Moltbot GitHub**: https://github.com/moltbot/moltbot
@@ -279,7 +279,7 @@ moltbot plugins disable flock
 
 ## Support
 
-- **FLock Issues**: Contact [FLock support](https://flock.io)
+- **FLock Issues**: Contact [FLock support](https://platform.flock.io)
 - **Plugin Issues**: [Open an issue](https://github.com/FLock-io/moltbot-plugin-flock/issues) on GitHub
 - **Moltbot Issues**: [Moltbot GitHub Issues](https://github.com/moltbot/moltbot/issues)
 
