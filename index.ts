@@ -1,4 +1,4 @@
-import { emptyPluginConfigSchema } from "moltbot/plugin-sdk";
+import { emptyPluginConfigSchema } from "clawdbot/plugin-sdk";
 
 const PROVIDER_ID = "flock";
 const PROVIDER_LABEL = "FLock API Platform";
