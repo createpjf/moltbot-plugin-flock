@@ -1,0 +1,40 @@
+{
+  "name": "@flock-io/moltbot-plugin-flock",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "FLock API Platform provider plugin for Moltbot",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FLock-io/moltbot-plugin-flock.git"
+  },
+  "homepage": "https://github.com/FLock-io/moltbot-plugin-flock#readme",
+  "bugs": {
+    "url": "https://github.com/FLock-io/moltbot-plugin-flock/issues"
+  },
+  "keywords": [
+    "moltbot",
+    "moltbot-plugin",
+    "flock",
+    "flock-io",
+    "llm",
+    "ai",
+    "openai-compatible"
+  ],
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "moltbot.plugin.json"
+  ],
+  "peerDependencies": {
+    "moltbot": ">=2026.1.0"
+  },
+  "devDependencies": {
+    "moltbot": "^2026.1.0"
+  },
+  "moltbot": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
