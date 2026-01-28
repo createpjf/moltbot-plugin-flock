@@ -41,22 +41,59 @@ This plugin lets you use **FLock API Platform** as a model provider in [Moltbot]
 
 Before you begin, make sure you have:
 
-### 1. Moltbot Installed
+### 1. Moltbot CLI Installed
 
 If you haven't installed Moltbot yet, follow the [official installation guide](https://docs.molt.bot/install):
 
 ```bash
-# macOS / Linux
+# Recommended: macOS / Linux one-liner
 curl -fsSL https://molt.bot/install.sh | bash
-
-# Or via npm (requires Node.js 22+)
-npm install -g moltbot
 ```
 
-Verify installation:
+**Or via npm** (requires Node.js 22+):
+```bash
+npm install -g moltbot@latest
+```
+
+> ⚠️ **Important:** Make sure to install `moltbot@latest` (version `2026.x.x`), NOT `moltbot@0.1.x`
+
+**Verify installation:**
 ```bash
 moltbot --version
+# Should show: 2026.x.x
 ```
+
+<details>
+<summary>🔧 <b>Troubleshooting: "command not found"</b></summary>
+
+If you see `zsh: command not found: moltbot`:
+
+**Option 1: Use the full path**
+```bash
+# Find where npm installed it
+npm list -g --depth=0
+
+# The bin is usually at:
+~/.nvm/versions/node/v22.x.x/bin/moltbot
+# or
+/usr/local/bin/moltbot
+```
+
+**Option 2: Fix your PATH (for nvm users)**
+```bash
+# Add to ~/.zshrc or ~/.bashrc:
+export PATH="$HOME/.nvm/versions/node/$(node -v)/bin:$PATH"
+
+# Then reload:
+source ~/.zshrc
+```
+
+**Option 3: Use npx**
+```bash
+npx moltbot --version
+```
+
+</details>
 
 ### 2. FLock API Key
 
