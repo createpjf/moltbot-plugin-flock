@@ -6,7 +6,7 @@ const DOCS_URL = "https://docs.flock.io/flock-products/api-platform/api-endpoint
 const DEFAULT_BASE_URL = "https://api.flock.io/v1";
 
 const flockPlugin = {
-  id: "flock",
+  id: "moltbot-plugin-flock",
   name: "FLock Provider",
   description: "FLock API Platform provider plugin (OpenAI-compatible)",
   configSchema: emptyPluginConfigSchema(),

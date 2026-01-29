@@ -1,5 +1,5 @@
 {
-  "id": "flock",
+  "id": "moltbot-plugin-flock",
   "name": "FLock Provider",
   "description": "FLock API Platform provider plugin (OpenAI-compatible)",
   "providers": [
