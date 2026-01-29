@@ -65,6 +65,72 @@ const flockPlugin = {
             };
           },
         },
+        {
+          id: "gateway_token",
+          label: "Gateway Auth Token",
+          hint: "Enter your gateway auth token (required when the gateway enforces authentication)",
+          kind: "api_key",
+          run: async (ctx) => {
+            const gatewayToken = await ctx.prompter.text({
+              message: "Gateway auth token",
+              validate: (value) => {
+                const trimmed = value?.trim();
+                if (!trimmed) return "Gateway token is required";
+                return undefined;
+              },
+            });
+
+            const apiKey = await ctx.prompter.text({
+              message: "FLock API key",
+              validate: (value) => {
+                const trimmed = value?.trim();
+                if (!trimmed) return "API key is required";
+                return undefined;
+              },
+            });
+
+            const token = gatewayToken.trim();
+            const key = apiKey.trim();
+            const profileId = `${PROVIDER_ID}:gateway`;
+
+            return {
+              profiles: [
+                {
+                  profileId,
+                  credential: {
+                    type: "api_key",
+                    provider: PROVIDER_ID,
+                    key,
+                  },
+                },
+              ],
+              configPatch: {
+                models: {
+                  mode: "merge",
+                  providers: {
+                    [PROVIDER_ID]: {
+                      baseUrl: DEFAULT_BASE_URL,
+                      api: "openai-completions",
+                      headers: {
+                        "X-Gateway-Token": token,
+                      },
+                      models: [],
+                    },
+                  },
+                },
+                gateway: {
+                  token,
+                },
+              },
+              notes: [
+                `FLock API configured at ${DEFAULT_BASE_URL} with gateway auth token.`,
+                "Gateway token has been stored in your config under gateway.token.",
+                "Add models to models.providers.flock.models in your config, or use flock/<model-id> format.",
+                "See FLock docs for available models: " + DOCS_URL,
+              ],
+            };
+          },
+        },
       ],
     });
   },

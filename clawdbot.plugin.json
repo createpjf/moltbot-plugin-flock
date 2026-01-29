@@ -1,13 +1,18 @@
 {
   "id": "flock",
   "name": "FLock Provider",
-  "description": "FLock API Platform provider plugin (OpenAI-compatible)",
+  "description": "FLock API Platform provider plugin (OpenAI-compatible, supports gateway auth)",
   "providers": [
     "flock"
   ],
   "configSchema": {
     "type": "object",
     "additionalProperties": false,
-    "properties": {}
+    "properties": {
+      "gatewayToken": {
+        "type": "string",
+        "description": "Gateway auth token for authenticated gateway connections"
+      }
+    }
   }
 }
