@@ -53,7 +53,30 @@ const flockPlugin = {
                     [PROVIDER_ID]: {
                       baseUrl: DEFAULT_BASE_URL,
                       api: "openai-completions",
-                      models: [],
+                      models: [
+                        {
+                          id: "minimax-m2.1",
+                          name: "MiniMax M2.1",
+                          input: ["text"],
+                          contextWindow: 131072,
+                          maxTokens: 8192,
+                        },
+                        {
+                          id: "deepseek-v3.2",
+                          name: "DeepSeek V3.2",
+                          input: ["text"],
+                          contextWindow: 131072,
+                          maxTokens: 8192,
+                        },
+                        {
+                          id: "kimi-k2-thinking",
+                          name: "Kimi K2 Thinking",
+                          reasoning: true,
+                          input: ["text"],
+                          contextWindow: 131072,
+                          maxTokens: 8192,
+                        },
+                      ],
                     },
                   },
                 },
