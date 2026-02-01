@@ -26,6 +26,9 @@
     "openai-compatible"
   ],
   "main": "index.ts",
+  "scripts": {
+    "prepublishOnly": "node scripts/validate-package.cjs"
+  },
   "files": [
     "index.ts",
     "openclaw.plugin.json",
