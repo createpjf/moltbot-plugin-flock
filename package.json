@@ -26,6 +26,9 @@
     "openai-compatible"
   ],
   "main": "index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepublishOnly": "node scripts/validate-package.cjs"
   },

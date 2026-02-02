@@ -10,7 +10,7 @@
 ```
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/flock"><img src="https://img.shields.io/npm/v/flock.svg?style=for-the-badge&logo=npm&logoColor=white&label=npm&color=CB3837" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@openclawd/flock"><img src="https://img.shields.io/npm/v/@openclawd/flock.svg?style=for-the-badge&logo=npm&logoColor=white&label=npm&color=CB3837" alt="npm version"></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge" alt="License"></a>
   <a href="https://github.com/FLock-io/moltbot-plugin-flock"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://platform.flock.io"><img src="https://img.shields.io/badge/FLock-Platform-6366f1?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+" alt="FLock Platform"></a>
@@ -126,12 +126,17 @@ You need an API key from FLock API Platform:
 ### Step 1: Install the Plugin
 
 ```bash
-openclaw plugins install flock
+npm i @openclawd/flock
+```
+
+Or via OpenClaw CLI:
+```bash
+openclaw plugins install @openclawd/flock
 ```
 
 You should see output like:
 ```
-✓ Installed flock
+✓ Installed @openclawd/flock
 ```
 
 ### Step 2: Enable the Plugin
@@ -346,7 +351,7 @@ openclaw doctor
 To update to the latest version:
 
 ```bash
-openclaw plugins update flock
+npm update @openclawd/flock
 ```
 
 ---
@@ -365,7 +370,8 @@ openclaw plugins disable flock
 
 | Command | Description |
 |---------|-------------|
-| `openclaw plugins install flock` | Install the plugin |
+| `npm i @openclawd/flock` | Install the plugin via npm |
+| `openclaw plugins install @openclawd/flock` | Install the plugin via CLI |
 | `openclaw plugins enable flock` | Enable the plugin |
 | `openclaw models auth login --provider flock` | Authenticate with FLock |
 | `openclaw agent --model flock/<model-id>` | Use a FLock model |
@@ -381,7 +387,7 @@ openclaw plugins disable flock
 - **FLock API Documentation**: https://docs.flock.io/flock-products/api-platform/api-endpoint
 - **OpenClaw Documentation**: https://openclaw.ai
 - **OpenClaw GitHub**: https://github.com/openclaw/openclaw
-- **This Plugin on npm**: https://www.npmjs.com/package/flock
+- **This Plugin on npm**: https://www.npmjs.com/package/@openclawd/flock
 
 ---
 
